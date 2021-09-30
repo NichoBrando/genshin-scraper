@@ -1,7 +1,7 @@
-const {Builder, By, Key, until} = require('selenium-webdriver');
+const { Builder, By } = require('selenium-webdriver');
 const fs = require('fs');
 
-const getThings = async() => {
+const generateJSON = async() => {
   const driver = await new Builder().forBrowser('firefox').build();
 
   const getList = async (className) => {
@@ -28,4 +28,4 @@ const getThings = async() => {
   }
 };
 
-getThings();
+generateJSON();
